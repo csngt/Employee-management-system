@@ -2,7 +2,7 @@ from database import init_db
 from manager import EmployeeManager
 
 def main():
-    init_db()  # Setup database
+    init_db()  
     mgr = EmployeeManager()
     
     while True:
