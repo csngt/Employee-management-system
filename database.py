@@ -1,7 +1,6 @@
 import sqlite3
 
 def init_db():
-    """Initializes the database and creates the table if it doesn't exist."""
     conn = sqlite3.connect("employees.db")
     cursor = conn.cursor()
     cursor.execute('''
@@ -18,7 +17,7 @@ def init_db():
     conn.close()
 
 def query_db(query, params=(), fetchone=False, fetchall=False):
-    """Helper function to run SQL commands safely."""
+    
     with sqlite3.connect("employees.db") as conn:
         cursor = conn.cursor()
         cursor.execute(query, params)
