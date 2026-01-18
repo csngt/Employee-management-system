@@ -33,4 +33,4 @@ class EmployeeManager:
     def soft_delete(self, emp_id):
         query = "UPDATE employees SET status = 'INACTIVE' WHERE id = ?"
         query_db(query, (emp_id,))
-        return f"\n⚠️ Success: Employee ID {emp_id} marked as INACTIVE."
+        return f"\n Success: Employee ID {emp_id} marked as INACTIVE."
